@@ -4,7 +4,7 @@ from ultralytics import YOLO
 from PIL import Image
 import numpy as np
 
-st.title("YOLO Image Detection App :)")
+st.title("YOLO Plate License Detection App :)")
 
 # Load YOLO model
 # model = YOLO("runs/detect/train73/weights/best.pt")
@@ -36,5 +36,5 @@ if uploaded_image is not None:
   class_names = [model.names[i] for i in class_ids]
   
   # Count people
-  person_count = class_names.count("person")
-  st.write(f"Number of people detected: **{person_count}**")
+  person_count = class_names.count("car")
+  st.write(f"Number of car detected: **{car_count}**")
